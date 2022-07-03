@@ -1,7 +1,7 @@
-import { Component, enableProdMode, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { Employee } from 'src/app/emplooye';
+import { Employee } from 'src/app/employee';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -31,22 +31,6 @@ export class EditEmployeeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  }
-
-  get first () {
-    return this.form.controls['first'];
-  }
-  get last () {
-    return this.form.controls['last'];
-  }
-  get email () {
-    return this.form.controls['email'];
-  }
-  get address () {
-    return this.form.controls['address'];
-  }
-  get phone () {
-    return this.form.controls['phone'];
   }
   
 

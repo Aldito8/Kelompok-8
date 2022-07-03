@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AddEmployeeComponent } from 'src/app/components/add-employee/add-employee.component';
 import { EditEmployeeComponent } from 'src/app/components/edit-employee/edit-employee.component';
-import { Employee } from 'src/app/emplooye';
+import { Employee } from 'src/app/employee';
 import { EmployeeService } from 'src/app/services/employee.service';
 import Swal from 'sweetalert2';
 

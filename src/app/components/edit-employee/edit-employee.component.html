@@ -5,86 +5,62 @@
 </div>
 <div class="modal-body">
     <form [formGroup]="form" (ngSubmit)="submit()" id="form">
-        <div class="row form-floating mb-3">
+        <div class="mb-3 row">
             <div class="col-3">
-                <label for="first">First Name</label>
+                <label for="recipient-name" class="col-form-label">First Name</label>
             </div>
             <div class="col-9">
-                <input id="first" [class.is-invalid]="form.controls['first'].invalid"
-                formControlName="first" type="text" class="form-control" required>
-                <div *ngIf="form.controls['first'].touched && form.controls['first'].invalid"
-                     class="text-danger text-sm-start">
-                     <small *ngIf="form.controls['first'].errors && form.controls['first'].errors['required']">First Name is
-                      required.</small>
+                <input formControlName="first" type="text" class="form-control" required>
+                <div *ngIf="form.controls['first'].touched && form.controls['first'].invalid" class="text-danger text-sm-start">
+                    <small *ngIf="form.controls['first'].errors && form.controls['first'].errors['required']">First Name is required.</small>
                 </div>
             </div>
-            
         </div>
-        <div class="row form-floating mb-3">
+        <div class="mb-3 row">
             <div class="col-3">
-                <label for="last">Last Name</label>
+                <label for="recipient-name" class="col-form-label">Last Name</label>
             </div>
             <div class="col-9">
-                <input id="last" [class.is-invalid]="form.controls['last'].invalid"
-                formControlName="last" type="text" class="form-control" required>
-            
-            <div *ngIf="form.controls['last'].touched && form.controls['last'].invalid"
-                class="text-danger text-sm-start">
-                <small *ngIf="form.controls['last'].errors && form.controls['last'].errors['required']">Email is
-                    required.</small>
+                <input formControlName="last" type="text" class="form-control" required>
+                <div *ngIf="form.controls['last'].touched && form.controls['last'].invalid" class="text-danger text-sm-start">
+                    <small *ngIf="form.controls['last'].errors && form.controls['last'].errors['required']">Last Name is required.</small>
+                </div>
             </div>
-            </div>
-            
         </div>
-        <div class="row form-floating mb-3">
+        <div class="mb-3 row">
             <div class="col-3">
-                <label for="email">Email</label>
+                <label for="recipient-name" class="col-form-label">Email</label>
             </div>
             <div class="col-9">
-                <input id="email" [class.is-invalid]="form.controls['email'].invalid"
-                formControlName="email" type="text" class="form-control" required>
-            
-            <div *ngIf="form.controls['email'].touched && form.controls['email'].invalid"
-                class="text-danger text-sm-start">
-                <small *ngIf="form.controls['email'].errors && form.controls['email'].errors['required']">Email is
-                    required.</small>
+                <input formControlName="email" type="text" class="form-control" required>
+                <div *ngIf="form.controls['email'].touched && form.controls['email'].invalid" class="text-danger text-sm-start">
+                    <small *ngIf="form.controls['email'].errors && form.controls['email'].errors['required']">Email is required.</small>
+                </div>
             </div>
-            </div>
-            
         </div>
-
-        <div class="row form-floating mb-3">
+        <div class="mb-3 row">
             <div class="col-3">
-                <label for="address">Address</label>
+                <label for="recipient-name" class="col-form-label">Address</label>
             </div>
             <div class="col-9">
-                <input id="address" [class.is-invalid]="address.invalid"
-                formControlName="address" type="string" class="form-control" required>
-            
-            <div *ngIf="address.touched && address.invalid"
-                class="text-danger text-sm-start">
-                <small *ngIf="address.errors && address.errors['required']">Address is
-                    required.</small>
+                <input formControlName="address" type="text" class="form-control" required>
+                <div *ngIf="form.controls['address'].touched && form.controls['address'].invalid" class="text-danger text-sm-start">
+                    <small *ngIf="form.controls['address'].errors && form.controls['address'].errors['required']">Address is required.</small>
+                </div>
             </div>
-            </div>
-            
-        </div>
-        <div class="row form-floating mb-3">
+        </div><div class="mb-3 row">
             <div class="col-3">
-                <label for="phone">Phone</label>
+                <label for="recipient-name" class="col-form-label">Phone</label>
             </div>
             <div class="col-9">
-                <input id="phone" [class.is-invalid]="phone.invalid" formControlName="phone" type="string"
-                class="form-control" required>
-            
-            <div *ngIf="phone.touched && phone.invalid" class="text-danger text-sm-start">
-                <small *ngIf="phone.errors && phone.errors['required']">Phone is required.</small>
+                <input formControlName="phone" type="text" class="form-control" required>
+                <div *ngIf="form.controls['phone'].touched && form.controls['phone'].invalid" class="text-danger text-sm-start">
+                    <small *ngIf="form.controls['phone'].errors && form.controls['phone'].errors['required']">Phone is required.</small>
+                </div>
             </div>
-            </div>
-            
         </div>
     </form>
 </div>
 <div class="modal-footer">
-    <button type="submit" form="form" class="btn btn-primary">Save Changes</button>
+    <button type="submit" form="form" class="btn btn-primary">Update</button>
 </div>

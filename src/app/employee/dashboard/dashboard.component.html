@@ -1,0 +1,43 @@
+<div class="table-wrapper">
+    <div class="table-title d-flex justify-content-between bg-primary bg-opacity-25 p-3">
+        <h3>Manage Employees</h3>
+        <button class="btn btn-success" (click)="addModal()">
+            <i class="bi bi-plus-circle">
+                <span> ADD</span>
+            </i>
+        </button>
+    </div>
+    <div class="shadow p-4 rounded-bottom ">
+    <table class="table table-bordered ">
+        <thead class="bg-primary bg-opacity-25">
+            <tr class="text-center">
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Address</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees">
+                
+                <td>{{employee.first}}</td>
+                <td>{{employee.last}}</td>
+                <td>{{employee.email}}</td>
+                <td>{{employee.address}}</td>
+                <td>{{employee.phone}}</td>
+                <td>
+                    <button [routerLink]="'/employee/' + employee._id" type="button"
+                        class="btn btn-primary btn-sm me-2"><i class="bi bi-eye"></i></button>
+                    <button (click)="editModal(employee, employee._id)" type="button" class="btn btn-secondary btn-sm me-2"><i
+                            class="bi bi-pencil"></i></button>
+                    <button (click)="hapus(employee._id)" type="button" class="btn btn-danger btn-sm"><i
+                            class="bi bi-trash"></i></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    
+</div>
